@@ -1,4 +1,4 @@
- apiViaCep
+ studyNodeJs
 
 Essa API é do curso de ORM com NodeJS. Utilizando o modelo MVC e Sequelize.
 
@@ -29,6 +29,18 @@ Pode pesquisar pelo id da pessoa.
  /pessoas/3
  /pessoas/2
 ```
+
+Inserir uma pessoa.
+```
+    No postman: body -> raw -> seleciona json, depois é só colocar o body como o exemplo: 
+    {
+    "nome": "Joao Pedro",
+    "ativo": false,
+    "email": "joao@joao.com",
+    "role": "estudante"
+    }
+```
+
 ## Retorno
 
 O retorno do body será em JSON!
@@ -54,12 +66,15 @@ O retorno do body será em JSON!
     }
 ```
 
-- Faltando parametros
-
+- Quando inserir
 ```json
-{
-    "status_code": 500,
-    "message": "\"logradouro\" is not allowed to be empty",
-    "data": {},
-}    
+    {
+    "id": 8,
+    "nome": "Joao Pedro",
+    "ativo": false,
+    "email": "joao@joao.com",
+    "role": "estudante",
+    "updatedAt": "2021-08-05T20:12:43.525Z",
+    "createdAt": "2021-08-05T20:12:43.525Z"
+    }
 ```

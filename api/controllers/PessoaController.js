@@ -19,6 +19,18 @@ class PessoaController {
             return res.status(500).json(error.message);
         }
     }
+
+    //nova pessoa vai armazenar o corpo(dados da pessoa) para fazer a inserção.
+    static async criaPessoa(req,res) {
+        const novaPessoa = req.body
+        try {
+            const novaPessoaCriada = await database.Pessoas.create(novaPessoa) ;
+            return res.status(200).json(novaPessoaCriada)
+        } catch (error) {
+            return res.status(500).json(error.message);
+        }
+    }
+
 }
 
 module.exports = PessoaController;
