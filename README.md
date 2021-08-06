@@ -1,11 +1,18 @@
  studyNodeJs
 
 Essa API é do curso de ORM com NodeJS. Utilizando o modelo MVC e Sequelize.
+ - Sequelize para as operações de CRUD
+ - Enviar dados através de parâmetros de requisição HTTP
+ - Enviar dados através do corpo da requisição HTTP
+ - Criar rotas para cada operação
 
 
 ## Diversos Comandos utilizados do Sequelize.
 - Arquivos de configurações padrões do sequelize: `npx sequelize-cli init`
 - Gerando model que cria tabela: `npx sequelize-cli model:create --name Pessoas --attributes nome:string,ativo:boolean,email:string,role:string `
+- Tabela "descr_nivel: `npx sequelize-cli model:create --name Niveis --attribute descr_nivel:string`
+- Tabela "Turmas: `npx sequelize-cli model:create --name Turmas --attributes data_inicio:dateonly `
+- Tabela "Matriculas": `npx sequelize-cli model:create --name Matriculas --attributes status:string       ` 
 - Migrando tabela pro db: `npx sequelize-cli db:migrate`
 - Criando arquivo modelo de dados na tabela: `npx sequelize-cli seed:generate --name demo-pessoas` 
 - Comando que insere os dados na tabela: `npx sequelize-cli db:seed:all`
@@ -115,3 +122,10 @@ Supondo que eu queira colocar o nome de "Joao Siqueira", na pessoa que o nome é
         "Mensagem": `Id ${id} deletado!` 
     }
 ```
+
+
+## Observações.
+
+- Os comandos de criação de model das tabelas, possuem apenas as colunas daquela própria tabela, as pk ou fk (dados de outras tabelas) são adicionadas depois.
+
+- Ao realizar comandos para criar arquivos de migração, o Sequelize colocou um número no começo que corresponde à data e horário. Ele vai rodar todas as migrações que estão na pasta na ordem que criamos, por isso que seguimos também essa ordem de criar.
