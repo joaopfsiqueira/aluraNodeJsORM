@@ -67,6 +67,11 @@ Deletar uma pessoa.
     URl do postman tem que ter uma id da pessoa que será excluída, exemplo:  http://localhost:3000/pessoas/5
 ```
 
+Pesquisar uma matruica.
+```
+    URl do postman tem que ter uma id do estudante e da matricula. exemplo:  http://localhost:3000/pessoas/1/matricula/5
+```
+
 ## Retorno
 
 O retorno do body será em JSON!
@@ -125,6 +130,20 @@ Supondo que eu queira colocar o nome de "Joao Siqueira", na pessoa que o nome é
 ```json
     {
         "Mensagem": `Id ${id} deletado!` 
+    }
+```
+
+
+- Quando pesquisa matricula:
+
+```json
+    {
+    "id": 5,
+    "status": "cancelado",
+    "createdAt": "2021-08-06T19:20:51.000Z",
+    "updatedAt": "2021-08-06T19:20:51.000Z",
+    "estudante_id": 1,
+    "turma_id": 2
     }
 ```
 
