@@ -5,6 +5,8 @@ Essa API é do curso de ORM com NodeJS. Utilizando o modelo MVC e Sequelize.
  - Enviar dados através de parâmetros de requisição HTTP
  - Enviar dados através do corpo da requisição HTTP
  - Criar rotas para cada operação
+ - Interpretar o diagrama de banco
+ - Associar tabelas através de métodos do Sequelize
 
 
 ## Diversos Comandos utilizados do Sequelize.
