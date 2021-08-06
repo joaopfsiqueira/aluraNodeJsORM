@@ -72,6 +72,17 @@ Pesquisar uma matruica.
     URl do postman tem que ter uma id do estudante e da matricula. exemplo:  http://localhost:3000/pessoas/1/matricula/5
 ```
 
+Inserir uma matruica.
+```
+    URl do postman tem que ter uma id do estudante exemplo:  http://localhost:3000/pessoas/1/matricula
+    E no corpo do body > raw, passar: 
+
+    { 
+    "status": "confirmado",
+    "turma_id": 4
+    }
+```
+
 ## Retorno
 
 O retorno do body será em JSON!
@@ -145,6 +156,19 @@ Supondo que eu queira colocar o nome de "Joao Siqueira", na pessoa que o nome é
     "estudante_id": 1,
     "turma_id": 2
     }
+```
+
+- Quando cria matricula:
+
+```json
+{
+    "id": 7,
+    "status": "confirmado",
+    "turma_id": 4,
+    "estudante_id": 1,
+    "updatedAt": "2021-08-06T21:34:08.952Z",
+    "createdAt": "2021-08-06T21:34:08.952Z"
+}
 ```
 
 

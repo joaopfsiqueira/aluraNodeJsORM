@@ -10,5 +10,6 @@ router.post('/pessoas/', PessoaController.criaPessoa);
 router.put('/pessoas/:id', PessoaController.atualizaPessoa);
 router.delete('/pessoas/:id', PessoaController.deletePessoa);
 router.get('/pessoas/:estudanteId/matricula/:matriculaId', PessoaController.pegaUmaMatricula);
+router.post('/pessoas/:estudanteId/matricula', PessoaController.criaMatricula);
 
 module.exports = router;
