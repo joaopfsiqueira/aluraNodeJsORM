@@ -15,13 +15,13 @@ module.exports = {
       estudante_id:{
         allowNull: false,
         type: Sequelize.INTEGER,
-        references: { model: 'Pessoas', key: 'id'}
+        references: { model: 'pessoas', key: 'id'}
       },
       //FOREIGN KEY
       turma_id:{
         allowNull: false,
         type: Sequelize.INTEGER,
-        references: { model: 'Turmas', key: 'id'}
+        references: { model: 'turmas', key: 'id'}
       },
       createdAt: {
         allowNull: false,
@@ -34,6 +34,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Matriculas');
+    return await queryInterface.dropTable('matriculas');
   }
 };

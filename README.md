@@ -15,6 +15,9 @@ Essa API é do curso de ORM com NodeJS. Utilizando o modelo MVC e Sequelize.
 - Tabela "Matriculas": `npx sequelize-cli model:create --name Matriculas --attributes status:string       ` 
 - Migrando tabela pro db: `npx sequelize-cli db:migrate`
 - Criando arquivo modelo de dados na tabela: `npx sequelize-cli seed:generate --name demo-pessoas` 
+- Arquivo seed tabela "Niveis": `npx sequelize-cli seed:generate --name demo-nivel `
+- Arquivo seed tabela "Turmas": `npx sequelize-cli seed:generate --name demo-turmas`
+- Arquivo seed tabela "Matriculas": `npx sequelize-cli seed:generate --name demo-matriculas`
 - Comando que insere os dados na tabela: `npx sequelize-cli db:seed:all`
 
 ## Parâmetros Obrigatórios
