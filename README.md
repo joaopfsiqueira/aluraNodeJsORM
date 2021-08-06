@@ -124,8 +124,9 @@ Supondo que eu queira colocar o nome de "Joao Siqueira", na pessoa que o nome é
 ```
 
 
-## Observações.
+## Observações
 
-- Os comandos de criação de model das tabelas, possuem apenas as colunas daquela própria tabela, as pk ou fk (dados de outras tabelas) são adicionadas depois.
+- Os comandos de criação de model das tabelas, possuem apenas as colunas daquela própria tabela, as pk ou fk (dados de outras tabelas) são adicionadas depois. Na parte de "associate" dentro do models. Utilizando hasMany e belongsTo. Depois só resta inserir as informações da coluna nos arquivos de migrations.
+
 
 - Ao realizar comandos para criar arquivos de migração, o Sequelize colocou um número no começo que corresponde à data e horário. Ele vai rodar todas as migrações que estão na pasta na ordem que criamos, por isso que seguimos também essa ordem de criar.
