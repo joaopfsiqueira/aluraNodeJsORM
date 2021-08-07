@@ -83,6 +83,22 @@ Inserir uma matruica.
     }
 ```
 
+Atualiza uma matruica.
+```
+    URl do postman tem que ter uma id do estudante e o id da matricula a ser atualizado http://localhost:3000/pessoas/1/matricula/5
+    E no corpo do body > raw, passar o que deseja atualizar daquela pessoa: 
+
+    {
+     "status": "cancelado"
+    }
+```
+
+Deleta uma matruica.
+```
+    URl do postman tem que ter uma id do estudante e o id da matricula a ser deletado http://localhost:3000/pessoas/2/matricula/6
+```
+
+
 ## Retorno
 
 O retorno do body será em JSON!
@@ -168,6 +184,27 @@ Supondo que eu queira colocar o nome de "Joao Siqueira", na pessoa que o nome é
     "estudante_id": 1,
     "updatedAt": "2021-08-06T21:34:08.952Z",
     "createdAt": "2021-08-06T21:34:08.952Z"
+}
+```
+
+- Quando atualiza matricula:
+
+```json
+{
+    "id": 5,
+    "status": "cancelado",
+    "createdAt": "2021-08-06T19:20:51.000Z",
+    "updatedAt": "2021-08-07T01:24:05.000Z",
+    "estudante_id": 1,
+    "turma_id": 2
+}
+```
+
+- Quando Deleta matricula:
+
+```json
+{
+    "message": "id 6 deletado!"
 }
 ```
 
